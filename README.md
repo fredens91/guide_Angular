@@ -31,3 +31,9 @@ ng add @ng-bootstrap/ng-bootstrap
 ```
 ng serve --open
 ```
+
+## Struttura di Angular
+
+## Components
+Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS.  
+
