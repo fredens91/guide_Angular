@@ -35,5 +35,6 @@ ng serve --open
 ## Struttura di Angular
 
 ## Components
-Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS.  
+Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
+- Il decoratore @Component identifica la classe immediatamente sotto di esso come una classe di componente e specifica i suoi metadati. 
 
