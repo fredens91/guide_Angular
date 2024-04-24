@@ -41,4 +41,5 @@ ng serve --open
 - Il decoratore @Component identifica la classe immediatamente sotto di esso come una classe di componente e specifica i suoi metadati.
 - Configurazioni del decoratore: 
     - Standalone: TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
-    - Selector: indica ad Angular di inserire il componente dentro il tag HTML corrispondente. Ad esempio, "<app-nome-selettore>" il componente viene inserito qui "</app-nome-selettore>"
+    - Selector: indica ad Angular di inserire il componente dentro il tag HTML corrispondente. Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
+    -
