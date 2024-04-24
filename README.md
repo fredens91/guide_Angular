@@ -40,9 +40,9 @@ ng serve --open
 ### Decoratori
 - Il decoratore @Component identifica la classe immediatamente sotto di esso come una classe di componente e specifica i suoi metadati.
 - Configurazioni del decoratore: 
-    - standalone: `true` quando questo è un componente "auto-descrittivo" o "standalone". `false` o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire `true`.
-    - selector: indica ad Angular di inserire il componente dentro il tag HTML corrispondente. 
-    Ad esempio, `<app-nome-selettore\>` il componente viene inserito qui `</app-nome-selettore\>`
-    - templateUrl: L'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
-    - imports: Un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
-    - provider: Un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
+    - `standalone` TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
+    - `selector` indica ad Angular di inserire il componente dentro il tag HTML corrispondente. 
+    Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
+    - `templateUrl` L'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
+    - `imports` Un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
+    - `provider` Un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
