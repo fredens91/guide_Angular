@@ -48,10 +48,11 @@ ng serve --open
     - `provider` è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
 
 ### View e Template
-- `View` rappresenta la parte visibile dell'interfaccia di un componente. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del componente.
-- `Template` definisce la struttura e il layout della vista (il componente gestisce la logica e i dati associati alla vista).
 
-Una View può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere view figlie.
+#### View
+Rappresenta la parte visibile dell'interfaccia di un componente. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del componente. 
+Può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere view figlie.
 
 #### Template
+Definisce la struttura e il layout della vista (il componente gestisce la logica e i dati associati alla vista).
 Un template assomiglia all'HTML standard, tranne che include anche la sintassi del template di Angular, che modifica l'HTML in base alla logica della tua applicazione e allo stato dei dati dell'applicazione e del DOM. Il tuo template può utilizzare il data binding per coordinare i dati dell'applicazione e del DOM, le pipe per trasformare i dati prima che vengano visualizzati e le direttive per applicare la logica dell'applicazione a ciò che viene visualizzato.
