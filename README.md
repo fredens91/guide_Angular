@@ -34,10 +34,10 @@ ng serve --open
 
 ## Struttura di Angular
 
-## Components
+## Component
 - Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
 
-### Decoratori
+### Decorator
 - Il decoratore `@Component` identifica la classe immediatamente sotto di esso come una classe di componente e specifica i suoi metadati.
 - Configurazioni del decoratore: 
     - `standalone` TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
@@ -53,3 +53,5 @@ ng serve --open
 
 Una View può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere view figlie.
 
+#### Template
+Un template assomiglia all'HTML standard, tranne che include anche la sintassi del template di Angular, che modifica l'HTML in base alla logica della tua applicazione e allo stato dei dati dell'applicazione e del DOM. Il tuo template può utilizzare il data binding per coordinare i dati dell'applicazione e del DOM, le pipe per trasformare i dati prima che vengano visualizzati e le direttive per applicare la logica dell'applicazione a ciò che viene visualizzato.
