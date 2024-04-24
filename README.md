@@ -57,5 +57,6 @@ Può essere organizzata gerarchicamente ed è quindi costituita da Component e T
 Definisce la struttura e il layout della vista (il componente gestisce la logica e i dati associati alla vista).
 Un template assomiglia all'HTML standard, tranne che include anche la sintassi del template di Angular, che modifica l'HTML in base alla logica della tua applicazione e allo stato dei dati dell'applicazione e del DOM. 
 Il Template può utilizzare:
-    - `data binding` per coordinare i dati dell'applicazione e del DOM
-    - ` pipe` per trasformare i dati prima che vengano visualizzati e le direttive per applicare la logica dell'applicazione a ciò che viene visualizzato.
+- `data binding` per coordinare i dati dell'applicazione e del DOM
+- ` pipe` per trasformare i dati prima che vengano visualizzati 
+- `direttive` per applicare la logica dell'applicazione a ciò che viene visualizzato.
