@@ -46,3 +46,10 @@ ng serve --open
     - `templateUrl` è l'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
     - `imports` è un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
     - `provider` è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
+
+### View e Template
+- `View` rappresenta la parte visibile dell'interfaccia di un componente. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del componente.
+- `Template` definisce la struttura e il layout della vista (il componente gestisce la logica e i dati associati alla vista).
+
+Una View può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere view figlie.
+
