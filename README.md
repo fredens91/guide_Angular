@@ -36,7 +36,7 @@ ng serve --open
 
 ### Topics
 
-1. [Directive](###-1.-Directive)
+1. [Directive](#esempio)
 2. [Template](###-2.-Template)
 3. [Dependency injection](###-3.-Dependency-injection)
 
@@ -107,3 +107,5 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 ### View
 Rappresenta la parte visibile dell'interfaccia di un componente. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del componente. 
 Può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere View figlie.
+
+## esempio
