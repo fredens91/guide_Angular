@@ -36,8 +36,8 @@ ng serve --open
 
 ### Topics
 
-1. [Directive](###1.-Directive)
-2. [Template](###2.-Template)
+1. [Directive](###-1.-Directive)
+2. [Template](###-2.-Template)
 3. [Dependency injection](###-3.-Dependency-injection)
 
 ### 1. Directive
