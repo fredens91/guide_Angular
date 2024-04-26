@@ -36,7 +36,7 @@ ng serve --open
 
 - [Directive](#Directive)
 - [Template](#Template)
-- [Dependency injection](#Dependency-injection)
+- [Dependency injection (DI)](#Dependency-injection-(DI))
 
 ## Directive
 Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Utilizza le direttive integrate in Angular per gestire moduli, elenchi, stili e ciò che gli utenti vedono.
@@ -93,7 +93,9 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 - `event listener` per ascoltare gli eventi dell'interfaccia utente
 - `template reference variable` per accedere al DOM
 
-## Dependency injection
+## Dependency injection (DI)
+Concetti fondamentale in Angular. La DI consente alle classi con decoratori (come Directive, Pipe e Iniettabili) di configurare le dipendenze di cui hanno bisogno.
+Nel sistema DI esistono due ruoli principali: **dependency consumer** e **dependency provider**.
 
 # Definizioni generiche
 
