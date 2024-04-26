@@ -43,9 +43,9 @@ ng serve --open
 ### 1. Directive
 Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Utilizza le direttive integrate in Angular per gestire moduli, elenchi, stili e ciò che gli utenti vedono.
 Tipi principali di Directive:
-- 1.1 Component
-- 1.2 Directive strutturali (ad esempio *ngIf o *ngFor)
-- 1.3 Attribute Directives
+- 1.1 `Component`
+- 1.2 `Directive strutturali` (ad esempio *ngIf o *ngFor)
+- 1.3 `Attribute Directives`
 
 #### 1.1 Component
 Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
@@ -61,16 +61,17 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
     - `provider` è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
 
 #### 1.2 Directives strutturali
-Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono *ngIf e *ngFor.
+Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf` e `*ngFor`.
 - *ngIf: aggiunge o rimuove elementi DOM in base al valore di una condizione
 ```
 <div *ngIf="mostraElemento">
   <!-- Contenuto dell'elemento che verrà mostrato solo se mostraElemento è true -->
-</div>`
+</div>
 
+```
 #### 1.3 Attribute Directives
 Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DOM.
-```
+
 
 
 ### 2. Template
