@@ -39,8 +39,7 @@ ng serve --open
 - [Dependency injection (DI)](#Dependency-injection-(DI))
 
 ## Directive
-Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Utilizza le direttive integrate in Angular per gestire moduli, elenchi, stili e ciò che gli utenti vedono.
-Tipi principali di Directive:
+Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Gestiscono moduli, elenchi, stili e ciò che gli utenti vedono.  Tipi principali di Directive:
 - [Component](#component)
 - [Directive strutturali](#directive-strutturali) (ad esempio `*ngIf` `*ngFor` `ngSwitch`)
 - [Directive di attributo](#directive-di-attributo) (ad esempio `ngModel` `ngClass` `ngStyle`)
