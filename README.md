@@ -45,7 +45,7 @@ Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi n
 Tipi principali di Directive:
 - 1.1 `Component`
 - 1.2 `Directive strutturali` (ad esempio *ngIf o *ngFor)
-- 1.3 `Attribute Directives`
+- 1.3 `Directive di attributo`
 
 #### 1.1 Component
 Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
@@ -62,29 +62,40 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
 
 #### 1.2 Directives strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf` e `*ngFor`.
-- *ngIf: aggiunge o rimuove elementi DOM in base al valore di una condizione
+- `*ngIf`: aggiunge o rimuove elementi DOM in base al valore di una condizione
 ```
 <div *ngIf="mostraElemento">
   <!-- Contenuto dell'elemento che verrà mostrato solo se mostraElemento è true -->
 </div>
 
 ```
-#### 1.3 Attribute Directives
-Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DOM.
+- `*ngFor`: serve per iterare su una collezione di elementi e generare dinamicamente elementi HTML ripetuti in base ai dati forniti. Questa direttiva è particolarmente utile quando si lavora con array o oggetti che contengono una serie di elementi da visualizzare nel template HTML. Ad esempio, supponiamo di avere un array di oggetti elementi nel nostro componente Angular. Possiamo utilizzare la direttiva *ngFor per iterare su questo array e generare dinamicamente elementi HTML per ciascun elemento nell'array:
+```
+<ul>
+  <li *ngFor="let elemento of elementi">
+    {{ elemento.nome }}
+  </li>
+</ul>
 
+```
+
+#### 1.3 Directive di attributo
+Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DOM. Esempi di Directive di attributo sono:
+- `[ngModel]`: fondamentale per gestire l'input dell'utente all'interno di form. In modo più dettagliato, ecco cosa fa e come funziona:
+    - Two-Way Data Binding: stabilisce un collegamento bidirezionale tra un elemento di input HTML e una variabile nel componente Angular.
+    - Quando [ngModel] è utilizzata su un elemento di input, come ad esempio <input [(ngModel)]="nome">, il valore inserito dall'utente in quell'input viene automaticamente associato alla variabile nome nel componente.
+- `[ngClass]`: consente di applicare o rimuovere classi CSS dinamicamente in base alle condizioni definite nel template. Questo è utile per cambiare lo stile degli elementi HTML in risposta a variabili o condizioni nel componente.
+- `[ngStyle]`: consente di applicare stili CSS dinamicamente agli elementi HTML in base alle espressioni nel template.
 
 
 ### 2. Template
 I Template definiscono la struttura e il layout della vista (il Component gestisce la logica e i dati associati alla View).
-Un Template assomiglia all'HTML standard ma include anche una sintassi Angular che modifica l'HTML in base alla logica della tua applicazione, permettondo funzionalità come ad esempio: 
+Un Template assomiglia all'HTML standard ma include anche una sintassi Angular che modifica l'HTML in base alla logica della tua applicazione, permettendo funzionalità come ad esempio: 
 - `data binding` per coordinare i dati dell'applicazione e del DOM
 - `pipe` per trasformare i dati prima che vengano visualizzati 
 - `directive` per applicare la logica dell'applicazione a ciò che viene visualizzato.
 - `event listener` per ascoltare gli eventi dell'interfaccia utente
 - `template reference variable` per accedere al DOM
-
-
-
 
 ## Definizioni generiche
 
