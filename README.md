@@ -34,8 +34,6 @@ ng serve --open
 
 ## Struttura di Angular
 
-### Topics
-
 - [Directive](#Directive)
 - [Template](#Template)
 - [Dependency injection](#Dependency-injection)
@@ -95,7 +93,7 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 - `event listener` per ascoltare gli eventi dell'interfaccia utente
 - `template reference variable` per accedere al DOM
 
-### 3. Dependency injection
+### Dependency injection
 
 ## Definizioni generiche
 
