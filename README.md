@@ -36,21 +36,21 @@ ng serve --open
 
 ### Topics
 
-1. [Directive](#esempio)
-2. [Template](###-2.-Template)
-3. [Dependency injection](###-3.-Dependency-injection)
+- [Directive](#Directive)
+- [Template](#Template)
+- [Dependency injection](#Dependency-injection)
 
-### 1. Directive
+### Directive
 Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Utilizza le direttive integrate in Angular per gestire moduli, elenchi, stili e ciò che gli utenti vedono.
 Tipi principali di Directive:
-- 1.1 `Component`
-- 1.2 `Directive strutturali` (ad esempio *ngIf o *ngFor)
-- 1.3 `Directive di attributo`
+- [Component](#component)
+- [Directive strutturali](#directive-strutturali) (ad esempio `*ngIf` `*ngFor` `ngSwitch`)
+- [Directive di attributo](#directive-di-attributo) (ad esempio `ngModel` `ngClass` `ngStyle`)
 
-#### 1.1 Component
+#### Component
 Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
 
-#### @Component (decorator di un component)
+##### @Component (decorator di un component)
 - Il decorator `@Component` specifica i metadati associati a un componente specifico. 
 - Configurazioni del decorator: 
     - `standalone` TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
@@ -60,7 +60,7 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
     - `imports` è un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
     - `provider` è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
 
-#### 1.2 Directive strutturali
+#### Directive strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf`, `*ngFor` e `*ngSwitch`.
 - `*ngIf`: aggiunge o rimuove elementi DOM in base al valore di una condizione
 ```
@@ -77,7 +77,7 @@ Sono Directive speciali che modificano la struttura del DOM manipolando la visua
   </li>
 </ul>
 ```
-#### 1.3 Directive di attributo
+#### Directive di attributo
 Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DOM. Esempi di Directive di attributo sono:
 - `[ngModel]`: fondamentale per gestire l'input dell'utente all'interno di form. In modo più dettagliato, ecco cosa fa e come funziona:
     - Two-Way Data Binding: stabilisce un collegamento bidirezionale tra un elemento di input HTML e una variabile nel componente Angular.
@@ -86,7 +86,7 @@ Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DO
 - `[ngClass]`: consente di applicare o rimuovere classi CSS dinamicamente in base alle condizioni definite nel template. Questo è utile per cambiare lo stile degli elementi HTML in risposta a variabili o condizioni nel componente.
 - `[ngStyle]`: consente di applicare stili CSS dinamicamente agli elementi HTML in base alle espressioni nel template.
 
-### 2. Template
+### Template
 I Template definiscono la struttura e il layout della vista (il Component gestisce la logica e i dati associati alla View).
 Un Template assomiglia all'HTML standard ma include anche una sintassi Angular che modifica l'HTML in base alla logica della tua applicazione, permettendo funzionalità come ad esempio: 
 - `data binding` per coordinare i dati dell'applicazione e del DOM
@@ -107,5 +107,3 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 ### View
 Rappresenta la parte visibile dell'interfaccia di un componente. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del componente. 
 Può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere View figlie.
-
-## esempio
