@@ -51,12 +51,12 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
 #### @Component (decorator di un component)
 - Il decorator `@Component` specifica i metadati associati a un componente specifico. 
 - Configurazioni del decorator: 
-    - `standalone` TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
-    - `selector` indica ad Angular di inserire il componente dentro il tag HTML corrispondente. 
+    - **standalone** TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
+    - **selector** indica ad Angular di inserire il componente dentro il tag HTML corrispondente. 
     Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
-    - `templateUrl` è l'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
-    - `imports` è un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
-    - `provider` è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
+    - **templateUrl** è l'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
+    - **imports** è un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
+    - **provider** è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
 
 ### Directive strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf`, `*ngFor` e `*ngSwitch`.
@@ -87,11 +87,11 @@ Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DO
 ## Template
 I Template definiscono la struttura e il layout della vista (il Component gestisce la logica e i dati associati alla View).
 Un Template assomiglia all'HTML standard ma include anche una sintassi Angular che modifica l'HTML in base alla logica della tua applicazione, permettendo funzionalità come ad esempio: 
-- `data binding` per coordinare i dati dell'applicazione e del DOM
-- `pipe` per trasformare i dati prima che vengano visualizzati 
-- `directive` per applicare la logica dell'applicazione a ciò che viene visualizzato.
-- `event listener` per ascoltare gli eventi dell'interfaccia utente
-- `template reference variable` per accedere al DOM
+- **data binding** per coordinare i dati dell'applicazione e del DOM
+- **pipe** per trasformare i dati prima che vengano visualizzati 
+- **directive** per applicare la logica dell'applicazione a ciò che viene visualizzato.
+- **event listener** per ascoltare gli eventi dell'interfaccia utente
+- **template reference variable** per accedere al DOM
 
 ## Dependency injection (DI)
 Concetti fondamentale in Angular. La DI consente alle classi con decoratori (come Directive, Pipe e Iniettabili) di configurare le dipendenze di cui hanno bisogno.
