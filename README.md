@@ -34,12 +34,25 @@ ng serve --open
 
 ## Struttura di Angular
 
-## Component
-- Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
+### Topics
+
+- Components
+- Templates
+- Directives
+- Dependency injection
+
 
 ### Decorator
-- Il decoratore `@Component` identifica la classe immediatamente sotto di esso come una classe di componente e specifica i suoi metadati.
-- Configurazioni del decoratore: 
+- In generale, un decorator in Angular è una funzione che consente di modificare in modo dichiarativo il comportamento di una classe o di un'altra struttura del linguaggio, come una proprietà o un metodo. I decorator sono una caratteristica di TypeScript, il linguaggio utilizzato per lo sviluppo di applicazioni Angular.
+- Esempi di decorator utilizzati in Angular includono @Component, @NgModule, @Injectable, @Input, @Output, @ViewChild, @ContentChild, e così via. Ognuno di questi decorator ha uno scopo specifico e viene utilizzato per annotare diversi aspetti dell'applicazione Angular.
+- In sintesi, un decorator in Angular è un meccanismo fondamentale per aggiungere metadati e configurare il comportamento delle classi e dei membri nelle applicazioni Angular. Aiutano a rendere il codice più chiaro, dichiarativo e manutenibile.
+
+### Component
+- Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
+
+#### @Component (decorator di un component)
+- Il decorator `@Component` specifica i metadati associati a un componente specifico. 
+- Configurazioni del decorator: 
     - `standalone` TRUE quando questo è un componente "auto-descrittivo" o "standalone". FALSE o non specificato, il componente deve essere dichiarato in un ngModule, che è uno stile più vecchio. Da preferire TRUE.
     - `selector` indica ad Angular di inserire il componente dentro il tag HTML corrispondente. 
     Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
