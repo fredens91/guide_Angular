@@ -36,9 +36,9 @@ ng serve --open
 
 ### Topics
 
-1. [Directive](### 1. Directive)
-2. [Template](### 2. Template)
-3. [Dependency injection](### 3. Dependency injection)
+1. [Directive](###1.-Directive)
+2. [Template](###2.-Template)
+3. [Dependency injection](###-3.-Dependency-injection)
 
 ### 1. Directive
 Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Utilizza le direttive integrate in Angular per gestire moduli, elenchi, stili e ciò che gli utenti vedono.
