@@ -36,9 +36,9 @@ ng serve --open
 
 ### Topics
 
-1. Directive
-2. Template
-3. Dependency injection
+1. [Directive](### 1. Directive)
+2. [Template](### 2. Template)
+3. [Dependency injection](### 3. Dependency injection)
 
 ### 1. Directive
 Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Utilizza le direttive integrate in Angular per gestire moduli, elenchi, stili e ciò che gli utenti vedono.
@@ -60,8 +60,8 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
     - `imports` è un array dei componenti, delle direttive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
     - `provider` è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
 
-#### 1.2 Directives strutturali
-Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf` e `*ngFor`.
+#### 1.2 Directive strutturali
+Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf`, `*ngFor` e `*ngSwitch`.
 - `*ngIf`: aggiunge o rimuove elementi DOM in base al valore di una condizione
 ```
 <div *ngIf="mostraElemento">
@@ -76,17 +76,15 @@ Sono Directive speciali che modificano la struttura del DOM manipolando la visua
     {{ elemento.nome }}
   </li>
 </ul>
-
 ```
-
 #### 1.3 Directive di attributo
 Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DOM. Esempi di Directive di attributo sono:
 - `[ngModel]`: fondamentale per gestire l'input dell'utente all'interno di form. In modo più dettagliato, ecco cosa fa e come funziona:
     - Two-Way Data Binding: stabilisce un collegamento bidirezionale tra un elemento di input HTML e una variabile nel componente Angular.
-    - Quando [ngModel] è utilizzata su un elemento di input, come ad esempio <input [(ngModel)]="nome">, il valore inserito dall'utente in quell'input viene automaticamente associato alla variabile nome nel componente.
+    - Quando [ngModel] è utilizzata su un elemento di input, come ad esempio `<input [(ngModel)]="nome">`, il valore inserito dall'utente in quell'input viene automaticamente associato alla variabile nome nel componente.
+    - Sincronizzazione automatica dei cambiamenti: Qualsiasi modifica al valore dell'elemento di input nell'interfaccia utente viene immediatamente riflesso nella variabile del componente, e viceversa. Ciò significa che se l'utente modifica il valore nell'input, la variabile nel componente verrà automaticamente aggiornata per riflettere quel nuovo valore, e se la variabile nel componente cambia per qualsiasi motivo, l'elemento di input sarà aggiornato di conseguenza nell'interfaccia utente.
 - `[ngClass]`: consente di applicare o rimuovere classi CSS dinamicamente in base alle condizioni definite nel template. Questo è utile per cambiare lo stile degli elementi HTML in risposta a variabili o condizioni nel componente.
 - `[ngStyle]`: consente di applicare stili CSS dinamicamente agli elementi HTML in base alle espressioni nel template.
-
 
 ### 2. Template
 I Template definiscono la struttura e il layout della vista (il Component gestisce la logica e i dati associati alla View).
@@ -96,6 +94,8 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 - `directive` per applicare la logica dell'applicazione a ciò che viene visualizzato.
 - `event listener` per ascoltare gli eventi dell'interfaccia utente
 - `template reference variable` per accedere al DOM
+
+### 3. Dependency injection
 
 ## Definizioni generiche
 
