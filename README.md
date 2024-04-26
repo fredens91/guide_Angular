@@ -47,7 +47,7 @@ Tipi principali di Directive:
 - 1.2 Directive strutturali (ad esempio *ngIf o *ngFor)
 - 1.3 Attribute Directives
 
-#### 1.1 Components
+#### 1.1 Component
 Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una particolare parte dell'interfaccia utente (UI). É costituita da 3 file: .TS, .HTML, .CSS. La classe TypeScript definisce l'interazione del template HTML e la struttura DOM renderizzata, mentre il foglio di stile descrive il suo aspetto.
 
 #### @Component (decorator di un component)
@@ -63,13 +63,14 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
 #### 1.2 Directives strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono *ngIf e *ngFor.
 - *ngIf: aggiunge o rimuove elementi DOM in base al valore di una condizione
-`<div *ngIf="mostraElemento">
+```
+<div *ngIf="mostraElemento">
   <!-- Contenuto dell'elemento che verrà mostrato solo se mostraElemento è true -->
 </div>`
 
 #### 1.3 Attribute Directives
 Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DOM.
-
+```
 
 
 ### 2. Template
