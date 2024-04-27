@@ -100,7 +100,8 @@ Concetti fondamentale in Angular. La DI consente alle classi con decoratori (com
 - Angular crea un Injector a livello di applicazione (noto anche come Injector "root") durante il processo di avvio dell'applicazione, così come ogni altro Injector necessario. Nella maggior parte dei casi non è necessario creare manualmente degli Injector, ma è importante sapere che esiste uno strato che collega i fornitori e i consumatori.
 - Il primo passo è aggiungere il decorator `@Injectable` per indicare che una classe può essere iniettata.
 - Si rende quindi la classe disponibile nella DI, fornendola dipendneza in più posizioni:
-  - A livello del **Component**, inserendo la configurazione **provider** del decorator  
+  - A livello del **Component**, inserendo la configurazione **provider** sotto il decorator `@Component` (provider: \[nomeClasse\]).
+  - A livello di **Module**, inserendo la configurazione **provider** sotto il decorator `@NgModule`.
 
 # Definizioni generiche
 
