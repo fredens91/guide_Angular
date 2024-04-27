@@ -123,6 +123,8 @@ Rappresenta la parte visibile dell'interfaccia di un [Component](#component). È
 Può essere organizzata gerarchicamente ed è quindi costituita da Component e [Template](#template). Ogni Template può avere View figlie.
 
 ## Pipe
+Una Pipe è una funzione che trasforma il valore di un'espressione da un template. Le pipe sono utilizzate per formattare i dati visualizzati nell'interfaccia utente in modo leggibile e significativo. Le pipe possono essere utilizzate per formattare le stringhe, le date, i numeri e persino per creare filtri personalizzati.
+Ad esempio, se hai una data che vuoi visualizzare in un formato diverso o un numero che vuoi formattare con un certo numero di cifre decimali, puoi utilizzare le pipe per fare ciò.
 
 ## Injectables
 
