@@ -56,7 +56,7 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
     Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
     - **templateUrl** è l'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
     - **imports** è un array delle Directive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
-    - **provider** è un array di provider per i servizi di cui il componente ha bisogno ([Dependency injection (DI)](#Dependency-injection-(DI))).
+    - **provider** è un array di provider per i servizi di cui il componente ha bisogno -> [Dependency injection (DI)](#Dependency-injection-(DI)).
 
 ### Directive strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf`, `*ngFor` e `*ngSwitch`.
