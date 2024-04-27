@@ -56,7 +56,7 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
     Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
     - **templateUrl** è l'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
     - **imports** è un array delle Directive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
-    - **provider** è un array di provider per i servizi di cui il componente ha bisogno. Nell'esempio, questo indica ad Angular come fornire l'istanza di HeroService che il costruttore del componente utilizza per ottenere l'elenco degli eroi da visualizzare.
+    - **provider** è un array di provider per i servizi di cui il componente ha bisogno ([Dependency injection (DI)](#Dependency-injection-(DI))).
 
 ### Directive strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf`, `*ngFor` e `*ngSwitch`.
@@ -95,7 +95,12 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 
 ## Dependency injection (DI)
 Concetti fondamentale in Angular. La DI consente alle classi con decoratori (come Directive, Pipe e Iniettabili) di configurare le dipendenze di cui hanno bisogno.
-Nel sistema DI esistono due ruoli principali: **dependency consumer** e **dependency provider**.
+- Nel sistema DI esistono due ruoli principali: **dependency consumer** e **dependency provider**.
+- Angular facilita l'interazione tra consumer e provider utilizzando un'astrazione chiamata **Injector**. Quando viene richiesta una dipendenza, l'Injector controlla il suo registro per vedere se è già disponibile un'istanza. Se non lo è, viene creata una nuova istanza e memorizzata nel registro. 
+- Angular crea un Injector a livello di applicazione (noto anche come Injector "root") durante il processo di avvio dell'applicazione, così come ogni altro Injector necessario. Nella maggior parte dei casi non è necessario creare manualmente degli Injector, ma è importante sapere che esiste uno strato che collega i fornitori e i consumatori.
+- Il primo passo è aggiungere il decorator `@Injectable` per indicare che una classe può essere iniettata.
+- Si rende quindi la classe disponibile nella DI, fornendola dipendneza in più posizioni:
+  - A livello del **Component**, inserendo la configurazione **provider** del decorator  
 
 # Definizioni generiche
 
