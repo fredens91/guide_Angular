@@ -33,7 +33,7 @@ ng serve --open
 ```
 
 # Struttura di Angular
-
+Per comprendere le capacità di Angular, è necessario apprendere quanto segue:
 - [Directive](#Directive)
 - [Template](#Template)
 - [Dependency Injection (DI)](#Dependency-injection-DI)
