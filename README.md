@@ -88,22 +88,32 @@ Sono Directive che modificano l'aspetto o il comportamento di un elemento nel DO
 I Template definiscono la struttura e il layout della vista (il Component gestisce la logica e i dati associati alla View).
 Un Template assomiglia all'HTML standard ma include anche una sintassi Angular che modifica l'HTML in base alla logica della tua applicazione, permettendo funzionalità come ad esempio: 
 - **data binding** per coordinare i dati dell'applicazione e del DOM
-- **pipe** per trasformare i dati prima che vengano visualizzati 
+- **[pipe](#pipe)** per trasformare i dati prima che vengano visualizzati 
 - **directive** per applicare la logica dell'applicazione a ciò che viene visualizzato.
 - **event listener** per ascoltare gli eventi dell'interfaccia utente
 - **template reference variable** per accedere al DOM
 
 ## Dependency Injection DI
-Concetti fondamentale in Angular. La DI consente alle classi con decoratori (come Directive, Pipe e Iniettabili) di configurare le dipendenze di cui hanno bisogno.
+Concetti fondamentale in Angular. La DI consente alle classi con [Decorator](#decorator) (come [Directive](#directive), [Pipe](#pipe) e [Injectables](#injectables)) di configurare le dipendenze di cui hanno bisogno.
 - Nel sistema DI esistono due ruoli principali: **dependency consumer** e **dependency provider**.
 - Angular facilita l'interazione tra consumer e provider utilizzando un'astrazione chiamata **Injector**. Quando viene richiesta una dipendenza, l'Injector controlla il suo registro per vedere se è già disponibile un'istanza. Se non lo è, viene creata una nuova istanza e memorizzata nel registro. 
 - Angular crea un Injector a livello di applicazione (noto anche come Injector "root") durante il processo di avvio dell'applicazione, così come ogni altro Injector necessario. Nella maggior parte dei casi non è necessario creare manualmente degli Injector, ma è importante sapere che esiste uno strato che collega i fornitori e i consumatori.
-- Il primo passo è aggiungere il decorator `@Injectable` per indicare che una classe può essere iniettata.
+- Il primo passo è aggiungere il Decorator`@Injectable` per indicare che una classe può essere iniettata.
 - Si rende quindi la classe disponibile nella DI, fornendola dipendneza in più posizioni:
-  - A livello del **Component**, inserendo la configurazione **provider** sotto il decorator `@Component` (provider: \[nomeClasse\]).
-  - A livello di **Module**, inserendo la configurazione **provider** sotto il decorator `@NgModule`.
+  - A livello del **[Component](#componentcomponent)**, inserendo la configurazione **provider** sotto il Decorator`@Component` (provider: \[nomeClasse\]).
+  - A livello di **Module**, inserendo la configurazione **provider** sotto il Decorator`@NgModule`.
+- Il modo più comune per iniettare una dipendenza è dichiararla nel costruttore di una classe. Quando Angular crea una nuova istanza di una classe Component, Directive o Pipe, determina quali servizi o altre dipendenze quella classe necessita guardando i tipi dei parametri del costruttore.
+- Quando Angular scopre che un Component dipende da un [Service](#service), prima controlla se l'Injector ha delle istanze esistenti di quel Service. Se un'istanza del Service richiesta non esiste ancora, l'Injector ne crea una utilizzando il provider registrato e la aggiunge all'Injector prima di restituire il Service ad Angular.
+- Quando tutti i Service richiesti sono stati risolti e restituiti, Angular può chiamare il costruttore del Component con quei Service come argomenti.
 
 # Definizioni generiche
+
+## Service
+In Angular, un Service" è una classe che fornisce un insieme di funzionalità riutilizzabili in tutta l'applicazione. I Service sono utilizzati per gestire la logica di business, l'accesso ai dati, le operazioni di rete, l'interazione con i Component e molte altre operazioni.
+
+I Service in Angular sono spesso utilizzati per mantenere la separazione delle responsabilità e la modularità dell'applicazione. Possono essere iniettati in altri componenti, direttive o Service mediante il meccanismo di "dependency injection" (DI), consentendo un'accoppiamento debole e una maggiore flessibilità e riutilizzo del codice.
+
+I Service possono essere registrati e forniti a livello di Component, modulo o applicazione ed è possibile utilizzarli per condividere dati, gestire lo stato dell'applicazione, effettuare chiamate HTTP, manipolare i dati del modello e molto altro ancora.
 
 ## Decorator
 - Un decorator in Angular è una funzione che consente di modificare in modo dichiarativo il comportamento di una classe o di un'altra struttura del linguaggio, come una proprietà o un metodo. I decorator sono una caratteristica di TypeScript, il linguaggio utilizzato per lo sviluppo di applicazioni Angular.
@@ -111,5 +121,9 @@ Concetti fondamentale in Angular. La DI consente alle classi con decoratori (com
 - In sintesi, un decorator in Angular è un meccanismo fondamentale per aggiungere metadati e configurare il comportamento delle classi e dei membri nelle applicazioni Angular. Aiutano a rendere il codice più chiaro, dichiarativo e manutenibile.
 
 ## View
-Rappresenta la parte visibile dell'interfaccia di un componente. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del componente. 
+Rappresenta la parte visibile dell'interfaccia di un Component. È il risultato della combinazione tra un Template HTML e le proprietà e i metodi del Component. 
 Può essere organizzata gerarchicamente ed è quindi costituita da Component e Template. Ogni Template può avere View figlie.
+
+## Pipe
+
+## Injectables
