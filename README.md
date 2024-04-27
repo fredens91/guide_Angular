@@ -36,7 +36,7 @@ ng serve --open
 
 - [Directive](#Directive)
 - [Template](#Template)
-- [Dependency injection (DI)](#Dependency-injection-(DI))
+- [Dependency Injection (DI)](#Dependency-injection-(DI))
 
 ## Directive
 Le Directive sono classi che aggiungono comportamenti aggiuntivi agli elementi nelle tue applicazioni Angular. Gestiscono moduli, elenchi, stili e ciò che gli utenti vedono. 
@@ -56,7 +56,7 @@ Rappresenta un'unità logica riutilizzabile di un'app Angular e gestisce una par
     Ad esempio, \<app-nome-selettore\> il componente viene inserito qui \</app-nome-selettore\>
     - **templateUrl** è l'indirizzo relativo del template HTML di questo componente. In alternativa, puoi fornire il template HTML direttamente, come valore della proprietà template. Questo template definisce la vista principale del componente.
     - **imports** è un array delle Directive e dei pacchetti a cui il tuo template fa riferimento. Essenziale per i componenti Standalone.
-    - **provider** è un array di provider per i servizi di cui il componente ha bisogno -> [Dependency injection (DI)](#Dependency-injection-(DI)).
+    - **provider** è un array di provider per i servizi di cui il componente ha bisogno -> [Dependency Injection (DI)](#Dependency-Injection-(DI)).
 
 ### Directive strutturali
 Sono Directive speciali che modificano la struttura del DOM manipolando la visualizzazione dei suoi elementi. Si riconoscono perché utilizzano un asterisco (*) prima del loro nome quando vengono applicate ad un elemento HTML. Le più comuni sono `*ngIf`, `*ngFor` e `*ngSwitch`.
@@ -93,7 +93,7 @@ Un Template assomiglia all'HTML standard ma include anche una sintassi Angular c
 - **event listener** per ascoltare gli eventi dell'interfaccia utente
 - **template reference variable** per accedere al DOM
 
-## Dependency injection (DI)
+## Dependency Injection (DI)
 Concetti fondamentale in Angular. La DI consente alle classi con decoratori (come Directive, Pipe e Iniettabili) di configurare le dipendenze di cui hanno bisogno.
 - Nel sistema DI esistono due ruoli principali: **dependency consumer** e **dependency provider**.
 - Angular facilita l'interazione tra consumer e provider utilizzando un'astrazione chiamata **Injector**. Quando viene richiesta una dipendenza, l'Injector controlla il suo registro per vedere se è già disponibile un'istanza. Se non lo è, viene creata una nuova istanza e memorizzata nel registro. 
