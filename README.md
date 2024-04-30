@@ -15,11 +15,11 @@ Installare da terminale la cartella di lavoro .html (e le varie componenti) su A
 ```
 ng generate component pages/myPage.html
 ```
-Installare i services
+Creare un Service
 ```
 ng generate service services/myService
 ```
-Installare i components
+Creare un Component
 ```
 ng generate component components/myComponents
 ```
