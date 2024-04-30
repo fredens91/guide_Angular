@@ -27,6 +27,13 @@ Installare Bootstrap
 ```
 ng add @ng-bootstrap/ng-bootstrap
 ```
+Autorizzazione JWT (passport)
+```
+npm i passport passport-local passport-jwt
+```
+```
+npm i --save-dev @types/passport @types/passport-local @types/passport-jwt
+```
 Avviare il client
 ```
 ng serve --open
