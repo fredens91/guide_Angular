@@ -34,6 +34,10 @@ npm i passport passport-local passport-jwt
 ```
 npm i --save-dev @types/passport @types/passport-local @types/passport-jwt
 ```
+Generare Guardia
+```
+ng generate guard guards/auth
+```
 Avviare il client
 ```
 ng serve --open
